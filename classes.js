@@ -41,5 +41,5 @@ var Member = /** @class */ (function (_super) {
     };
     return Member;
 }(User));
-var ezekiel = new Member(1, 'ezekiel', 'ezekiel@gmail.com', 40);
+var ezekiel = new Member(1, "ezekiel", "ezekiel@gmail.com", 40);
 console.log(ezekiel.payInvoice());

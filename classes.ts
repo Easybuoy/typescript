@@ -1,4 +1,12 @@
-class User {
+interface UserInterface {
+  name: string;
+  email: string;
+  age: number;
+  register();
+  payInvoice();
+}
+
+class User implements UserInterface {
   name: string;
   email: string;
   age: number;
@@ -16,7 +24,7 @@ class User {
   }
 
   payInvoice() {
-      console.log(`${this.name} paid invoice`);
+    console.log(`${this.name} paid invoice`);
   }
 }
 
@@ -33,10 +41,9 @@ class Member extends User {
   }
 
   payInvoice() {
-      super.payInvoice();
+    super.payInvoice();
   }
 }
 
-
-let ezekiel: User = new Member(1, 'ezekiel', 'ezekiel@gmail.com', 40);
-console.log(ezekiel.payInvoice())
+let ezekiel: User = new Member(1, "ezekiel", "ezekiel@gmail.com", 40);
+console.log(ezekiel.payInvoice());
